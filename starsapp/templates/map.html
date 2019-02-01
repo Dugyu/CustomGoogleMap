@@ -21,31 +21,26 @@
         function initMap() {
           var styledMapType = new google.maps.StyledMapType(
             [
-            {elementType: 'geometry', stylers: [{color: '#e91e63'}]},
-            {elementType: 'labels.text.fill', stylers: [{visibility: 'off'}]},
-            {elementType: 'labels.text.stroke',stylers: [{visibility: 'off'}]},
-            {featureType: 'administrative', elementType: 'geometry.stroke',stylers: [{color: '#c9b2a6'}]}, 
-            {featureType: 'administrative.land_parcel',elementType: 'geometry.stroke',stylers: [{color: '#A5DEE4'}]},
-            {featureType: 'administrative.land_parcel',elementType: 'labels.text.fill',stylers: [{color: '#566C73'}]},
-            {featureType: 'landscape.natural',elementType: 'geometry',stylers: [{color: '#5A7E8D'}]},
-            {featureType: 'poi',elementType: 'geometry',stylers: [{color: '#779CAA'}]},
-            {featureType: 'poi',elementType: 'labels',stylers: [{visibility: 'off'}]},
-            {featureType: 'poi.park',elementType: 'geometry.fill', stylers: [{color: '#4F7885'}]},
-            {featureType: 'poi.park',elementType: 'labels.text.fill',stylers: [{visibility: 'off'}]},
-            {featureType: 'road',elementType: 'geometry', stylers: [{color: '#57727C'}]},
-            {featureType: 'road.arterial',elementType: 'geometry',stylers: [{color: '#566C73'}]},
-            {featureType: 'road.highway',elementType: 'geometry',stylers: [{color: '#566C73'}]},
-            {featureType: 'road.highway',elementType: 'geometry.stroke',stylers: [{color: '#566C73'}]},
-            {featureType: 'road.highway.controlled_access',elementType: 'geometry',stylers: [{color: '#e98d58'}]},
-            {featureType: 'road.highway.controlled_access',elementType: 'geometry.stroke',stylers: [{color: '#db8555'}]},
-            {featureType: 'road.local',elementType: 'labels.text.fill',stylers: [{color: '#566C73'}]},
+            {elementType: 'labels', stylers: [{visibility: 'off'}]},
+            {elementType: 'geometry.stroke', stylers: [{color: '#a80000'}]},
+            {elementType: 'geometry.fill', stylers: [{color: '#eee3061f'}]},
+            {featureType: 'landscape.natural',elementType: 'geometry',stylers: [{color: '#ff5649'}]},
+
+            {featureType: 'poi',elementType: 'geometry.fill',stylers: [{color: '#ff5649'}]},
+            {featureType: 'poi.park',elementType: 'geometry.fill', stylers: [{color: '#ff5649'}]},
+
+            {featureType: 'road',elementType: 'geometry.fill', stylers: [{color: '#000000'}]},
+            {featureType: 'road',elementType: 'geometry.stroke', stylers: [{color: '#ff5649'}]},
+
+            {featureType: 'road.highway',elementType: 'geometry.fill',stylers: [{color: '#a80000'}]},
+            {featureType: 'road.highway',elementType: 'geometry.stroke',stylers: [{color: '#ff5649'}]},
+            {featureType: 'road.highway.controlled_access',elementType: 'geometry.fill',stylers: [{color: '#e3061f'}]},
+            {featureType: 'road.highway.controlled_access',elementType: 'geometry.stroke',stylers: [{color: '#ff5649'}]},
+
             {featureType: 'transit.line',elementType: 'geometry',stylers: [{color: '#dfd2ae'}]},
-            {featureType: 'transit.line',elementType: 'labels.text.fill',stylers: [{color: '#8f7d77'}]},  
-            {featureType: 'transit.line',elementType: 'labels.text.stroke',stylers: [{color: '#A5DEE4'}]},
             {featureType: 'transit.station',elementType: 'geometry',stylers: [{color: '#dfd2ae'}]},
-            {featureType: 'transit.station',elementType: 'labels.icon',"stylers":[{ "saturation": -100,"gamma": 1.0}]},
-            {featureType: 'water',elementType: 'geometry.fill', stylers: [{color: '#566C73'}]},
-            {featureType: 'water', elementType: 'labels.text.fill', stylers: [{color: '#566C73'}]} 
+  
+            {featureType: 'water',elementType: 'geometry.fill', stylers: [{color: '#a80000'}]},
           ],
           {name: 'Event Map'});
           var map = new google.maps.Map(document.getElementById('map'), {
